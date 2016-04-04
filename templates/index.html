@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="col-md-12">
+
+    <div class="col-md-6" style="border: 3px saddlebrown solid;padding: 3%">
+        <h3>JSON COMPARE FOR FLIGHTS</h3>
+        <form method="post" action="/compareflight">
+            <div class="form-group">
+                <label>File 1</label><input type="url" class="form-control" name = "url1" required/></div>
+            <div class="form-group">
+                <label>File 2</label><input type="url" name = "url2" required class="form-control"/></div>
+            <div class="form-group">
+                <label>Scoop Index 1</label><input type="number" name="scoop_id_1" class="form-control" required></div>
+            <div class="form-group">
+                <label>Scoop Json 1</label><input type="text" name="scoop_1" class="form-control" required></div>
+
+            <div class="form-group">
+                <label>Scoop Index 2</label><input type="number" name="scoop_id_2" class="form-control" required></div>
+            <div class="form-group">
+                <label>Scoop Json 2</label><input type="text" name="scoop_2" class="form-control" required></div>
+
+
+            <div class="form-group">
+                <label>Id for Comparator 1</label><input type="text" name="dictionary_id_1" class="form-control" required></div>
+            <div class="form-group">
+                <label>Id for Comparator 2</label><input type="text" name="dictionary_id_2" class="form-control" required></div>
+
+            <div class="form-group">
+                <label>Appender for Key 1</label><select name="appender_1" class="form-control">
+                    <option value="REM_AFTER_LAST_UNDERSCORE">Remove after last Underscore</option>
+            </select></div>
+            <div class="form-group">
+                <label>Appender for Key 2</label><select name="appender_2" class="form-control">
+                <option value="REM_AFTER_LAST_UNDERSCORE">Remove after last Underscore</option>
+            </select></div>
+
+            <div class="form-group">
+                <label>Attributes to be compared</label><input type="text" name = "attrs" placeholder="comma seperated values" class="form-control"></div>
+
+
+            <div class="form-group">
+                <label>Services To Be Executed</label><br>
+                <input type="text" name="service"  class="form-control"><br>
+
+            </div>
+
+            <button type="submit" class="btn btn-sm btn-primary">Start Comparing</button>
+        </form>
+    </div>
+
+    <div class="col-md-6" style="border: 3px saddlebrown solid;padding: 3%">
+        <h3>JSON COMPARE FOR FLIGHTS</h3>
+        <form method="post" action="/compareflightfileupload" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>File 1</label><input type="file" class="form-control" name = "url1" required/></div>
+            <div class="form-group">
+                <label>File 2</label><input type="file" name = "url2" required class="form-control"/></div>
+            <div class="form-group">
+                <label>Scoop Index 1</label><input type="number" name="scoop_id_1" class="form-control" required></div>
+            <div class="form-group">
+                <label>Scoop Json 1</label><input type="text" name="scoop_1" class="form-control" ></div>
+
+            <div class="form-group">
+                <label>Scoop Index 2</label><input type="number" name="scoop_id_2" class="form-control" required></div>
+            <div class="form-group">
+                <label>Scoop Json 2</label><input type="text" name="scoop_2" class="form-control" ></div>
+
+
+            <div class="form-group">
+                <label>Id for Comparator 1</label><input type="text" name="dictionary_id_1" class="form-control" required></div>
+            <div class="form-group">
+                <label>Id for Comparator 2</label><input type="text" name="dictionary_id_2" class="form-control" required></div>
+
+            <div class="form-group">
+                <label>Appender for Key 1</label><select name="appender_1" class="form-control">
+                <option value="REM_AFTER_LAST_UNDERSCORE">Remove after last Underscore</option>
+                <option value="NOTHING">Nothing</option>
+            </select></div>
+            <div class="form-group">
+                <label>Appender for Key 2</label><select name="appender_2" class="form-control">
+                <option value="REM_AFTER_LAST_UNDERSCORE">Remove after last Underscore</option>
+                <option value="NOTHING">Nothing</option>
+            </select></div>
+
+            <div class="form-group">
+                <label>Attributes to be compared</label><input type="text" name = "attrs" placeholder="comma seperated values" class="form-control"></div>
+
+
+            <div class="form-group">
+                <label>Services To Be Executed</label><br>
+                <input type="text" name="service"  class="form-control"><br>
+
+            </div>
+
+            <button type="submit" class="btn btn-sm btn-primary">Start Comparing</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
